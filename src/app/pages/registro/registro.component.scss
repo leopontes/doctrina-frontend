@@ -1,0 +1,68 @@
+.wrapper-register {
+    background-image: url(../../../assets/Allura_Living_Room.png), url(../../../assets/Croods_Peaceful_Place.png);
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+    padding: 1rem;
+}
+
+.card {
+    width: 100%;
+    max-width: 400px;
+    transform: transform 0.3s, box-shadow 0.3s;
+}
+
+.plan-card {
+    cursor: pointer;
+    width: 100px;
+}
+
+.plan-card.active {
+    border: 2px solid #008bf2;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-weight: 500;
+    /* Highlight the selected plan */
+}
+
+p.card-text {
+    font-size: 10px;
+}
+
+a {
+    &.logo {
+        font-size: 30px;
+        font-weight: 800;
+    }
+
+    i {
+        padding: 0;
+    }
+}
+
+button{
+    background-color: #000;
+    color: #fff;
+
+    &:hover{
+        background-color: #283237;
+    }
+
+    &:active{
+        background-color: #000 !important;
+    }
+
+    &:disabled{
+        background-color: #d3d3d3 !important;
+    }
+
+    &.return{
+        background-color: transparent;
+        color: #000;
+        border: solid 1px #000;
+
+        &:hover, &:active{
+            background-color: transparent !important;
+        }
+    }
+
+}

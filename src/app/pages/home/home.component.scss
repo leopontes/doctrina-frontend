@@ -1,0 +1,125 @@
+@import '../../../assets/_variables';
+
+.banner {
+    background-image: url(../../../assets/fundo_landpage2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 200px;
+}
+
+.banner.item-1{
+    background-image: url(../../../assets/fundo_landpage1.png);
+}
+
+.banner.item-2{
+    background-image: url(../../../assets/fundo_landpage3.png);
+}
+
+// Hero Section
+.hero {
+    //background-color: $light-gray;
+    padding: 60px 0;
+    text-align: center;
+
+    h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .btn {
+        margin-top: 20px;
+    }
+}
+
+// Section Title
+.section-title {
+    margin: 50px 0 30px;
+    text-align: center;
+
+    h2 {
+        margin-bottom: 10px;
+    }
+
+    p {
+        color: gray;
+    }
+}
+
+// About Section
+.about {
+    padding: 60px 0;
+
+    h3 {
+        font-size: 1.75rem;
+        margin-bottom: 15px;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+
+        li {
+            margin-bottom: 10px;
+
+            i{
+                color: #FF9F67;
+                margin-right: 5px;
+            }
+
+            &:before {
+                margin-right: 10px;
+                color: $secondary-color;
+            }
+        }
+    }
+}
+
+// Pricing Section
+.pricing {
+    background-color: $light-gray;
+    padding: 50px 0;
+
+    .card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        .card-body {
+            text-align: center;
+
+            ul{
+                text-align: left;
+                padding: 10px;
+                
+                li{
+                    list-style: none;
+                    font-size: 12px;
+
+                    i{
+                        margin-right: 5px;
+                    }
+                }
+            }
+
+            .card-title {
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+            }
+
+            .card-text {
+                margin-bottom: 20px;
+            }
+
+            .btn {
+                margin-top: 10px;
+            }
+        }
+    }
+}

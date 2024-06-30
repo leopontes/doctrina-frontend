@@ -1,0 +1,33 @@
+<div class="login-wrapper">
+  <div class="login-panel">
+    <a class="navbar-brand logo" [href]="'/home'">
+      Doctrina
+      <i class="fa fa-solid fa-graduation-cap"></i>
+    </a>
+    <form class="login-form">
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <button type="submit" class="login-btn">Entrar</button>
+
+      <div class="d-flex">
+        <span class="login-btn google"><i class="fa fa-brands fa-google"></i></span>
+        <button type="button" class="login-btn google">Google</button>
+      </div>
+
+      <div class="d-flex">
+        <span class="login-btn facebook"><i class="fa fa-brands fa-facebook"></i></span>
+        <button type="button" class="login-btn facebook">Facebook</button>
+      </div>
+      <div class="login-options">
+        <a href="#" class="forgot-password">Esqueci minha senha</a>
+        <a href="#" class="create-account">Criar conta</a>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,104 @@
+<div class="wrapper-register d-flex justify-content-center">
+  <div class="card">
+    <div class="card-body">
+      <a class="navbar-brand logo" [href]="'/home'">
+        Doctrina
+        <i class="fa fa-solid fa-graduation-cap"></i>
+      </a>
+      <!-- Dados pessoais -->
+      <div *ngIf="step === 1">
+        <h5 class="card-title text-center">Dados Pessoais</h5>
+        <form [formGroup]="formDadosPessoais">
+          <div class="mb-3">
+            <label for="name" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="name" formControlName="name" name="name" placeholder="Digite seu nome">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" formControlName="email" name="email" placeholder="Digite seu email">
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Senha</label>
+            <input type="password" class="form-control" id="password" formControlName="password" name="password" placeholder="Digite sua senha">
+          </div>
+          <div class="mb-3">
+            <label for="confirm-password" class="form-label">Confirmar Senha</label>
+            <input type="password" class="form-control" id="confirm-password" formControlName="confirmPassword" name="confirmPassword" placeholder="Confirme sua senha">
+          </div>
+          <button [disabled]="formDadosPessoais.invalid" type="button" class="btn btn-primary w-100" (click)="nextStep()">Próximo</button>
+        </form>
+      </div>
+
+      <!-- Plano e Pagamento -->
+      <div *ngIf="step === 2">
+        <h5 class="card-title text-center">Plano e Pagamento</h5>
+        <form [formGroup]="formDadosPagamento">
+          <div class="mb-3 text-center">
+            <label for="" class="form-label d-block">Escolha seu plano:</label>
+            <div class="d-flex justify-content-center">
+              <div class="card plan-card mx-2" [class.active]="formDadosPagamento?.value.plan === 'basic'" (click)="selectPlan('basic')">
+                <div class="card-body">
+                  <h5 class="card-title">Básico</h5>
+                  <p class="card-text">R$0,00/mês</p>
+                </div>
+              </div>
+              <div class="card plan-card mx-2" [class.active]="formDadosPagamento.value.plan === 'advanced'" (click)="selectPlan('advanced')">
+                <div class="card-body">
+                  <h5 class="card-title">Avançado</h5>
+                  <p class="card-text">R$49,90/mês</p>
+                </div>
+              </div>
+              <div class="card plan-card mx-2" [class.active]="formDadosPagamento.value.plan === 'premium'" (click)="selectPlan('premium')">
+                <div class="card-body">
+                  <h5 class="card-title">Premium</h5>
+                  <p class="card-text">R$99,90/mês</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="card-number" class="form-label">Número do Cartão</label>
+            <input type="text" class="form-control" id="card-number" formControlName="cardNumber" required name="cardNumber" placeholder="0000 0000 0000 0000">
+          </div>
+          <div class="mb-3">
+            <label for="expiry-date" class="form-label">Data de Validade</label>
+            <input type="text" class="form-control" id="expiry-date" formControlName="expiryDate" required name="expiryDate" placeholder="MM/AA">
+          </div>
+          <div class="mb-3">
+            <label for="cvv" class="form-label">CVV</label>
+            <input type="text" class="form-control" id="cvv" formControlName="cvv" name="cvv" required placeholder="123">
+          </div>
+          <div class="mb-3">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="terms" formControlName="agreedToTerms" name="agreedToTerms" required>
+              <label class="form-check-label" for="terms">
+                Eu li e aceito os <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">termos de serviço</a>.
+              </label>
+            </div>
+          </div>
+          <button type="button" class="btn return btn-secondary w-100 mb-2" (click)="prevStep()">Voltar</button>
+          <button type="submit" [disabled]="formDadosPagamento.invalid" class="btn btn-success w-100">Cadastrar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Terms of Service -->
+<div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="termsModalLabel">Termos de Serviço</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Insert the terms of service content here -->
+        <p>Aqui vão os detalhados termos de serviço para a utilização do nosso portal...</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
