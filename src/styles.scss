@@ -21,20 +21,6 @@ body {
   padding: 0;
 }
 
-
-// Navigation Menu
-.navbar {
-  padding: 1rem;
-  
-  .navbar-brand{
-    color: $text-color-primary;
-    font-size: 15px;
-    &:hover {
-      color: darken(#fff, 10%);
-    }
-  }
-}
-
 // Footer
 footer {
   text-align: center;

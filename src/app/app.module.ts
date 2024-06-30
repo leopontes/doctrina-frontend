@@ -15,6 +15,8 @@ import { LoginComponent } from './pages/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'
+import { AuthService } from './services/auth.service';
+import { authGuard } from './guard/auth.guard';
  
 @NgModule({
   declarations: [
