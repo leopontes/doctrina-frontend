@@ -1,0 +1,125 @@
+@import '../../../assets/__variables.scss';
+
+.profile {
+    display: flex;
+    align-items: center;
+
+    li{
+        width: 250px;
+    }
+}
+
+.user-icon {
+    position: relative;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.user-icon .initial {
+    width: 40px;
+    height: 40px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 0px;
+    color: #333;
+    text-decoration: none;
+    margin: 0;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f0f0f0;
+}
+
+.notification-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+.notification-icon .badge {
+    position: absolute;
+    top: 0px;
+    right: 1px;
+    font-size: 7px;
+    color: #fff;
+    background-color: $text-color-primary;
+}
+
+.notification-icon, .settings-icon {
+    i {
+        font-size: 25px;
+        color: #ff8333;
+    }
+}
+
+.avatar-default {
+    background-image: url('../../../assets/img/avatar.jpg');
+    background-size: 310px 310px;
+    background-repeat: no-repeat;
+    background-position: top -49px right -41px;
+    width: 100px;
+    height: 100px;
+    border: solid 1px grey;
+    border-radius: 100px;
+    position: relative;
+    margin-top: 68px;
+}
+
+.avatar-nome{
+    text-align: center;
+    margin: 55px 0 0 0;
+}
+
+.avatar-foto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3f3f3f3f;
+    background-image: url('../../../assets/img/textura-granulada-gradiente_23-2148981502.jpg');
+    height: 80px;
+    margin-top: -9px;
+    border-radius: 5px 5px 0 0;
+}
+
+hr{
+    margin: 5px;
+}
+
+li{
+    &.menu-item{
+        padding: 8px 14px;
+    }
+}
+
+.file-upload-label {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    float: right;
+}
+
+.file-upload-label i {
+    font-size: 14px; /* Tamanho do ícone */
+    margin-right: 10px; /* Espaçamento entre o ícone e o texto (opcional) */
+}
+
+/* Estilo adicional para o input */
+#file-upload {
+    display: none; /* Esconder o input padrão */
+}

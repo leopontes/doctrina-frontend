@@ -9,11 +9,11 @@ import { authGuard } from './guard/auth.guard';
 const routes: Routes = [
   { path: '', component: PortalComponent, children: [
     { path: '', redirectTo: 'home', pathMatch: 'full'},
-    { path: 'home', component: HomeComponent  },
+    { path: 'home', component: HomeComponent, data: { breadcrumb: 'Home' }  },
+    { path: 'main', loadChildren: ()=>import('./pages/main/main.module').then(m=>m.MainModule), canActivate: [authGuard], data: { breadcrumb: 'Main' }},
   ]},
-  { path: 'registro', component: RegistroComponent  },
+  { path: 'registro', component: RegistroComponent, data: { breadcrumb: 'Registro' }  },
   { path: 'login', component: LoginComponent  },
-  { path: 'main', loadChildren: ()=>import('./pages/main/main.module').then(m=>m.MainModule), canActivate: [authGuard]},
   { path: '**', redirectTo: '', pathMatch: 'full'}
 ];
 

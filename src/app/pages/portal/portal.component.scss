@@ -1,0 +1,14 @@
+.content {
+    padding-bottom: 50px; /* Ajuste conforme a altura do seu footer */
+}
+
+.site-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Altura mínima da viewport */
+}
+
+.content {
+    flex: 1; /* Faz o conteúdo principal expandir para ocupar o espaço disponível */
+    padding: 20px; /* Adicione padding conforme necessário */
+}

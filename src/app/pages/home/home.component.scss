@@ -1,18 +1,18 @@
 @import '../../../assets/_variables';
 
 .banner {
-    background-image: url(../../../assets/fundo_landpage2.png);
+    background-image: url('../../../assets/img/fundo_landpage2.png');
     background-repeat: no-repeat;
     background-position: center;
     height: 200px;
 }
 
 .banner.item-1{
-    background-image: url(../../../assets/fundo_landpage1.png);
+    background-image: url('../../../assets/img/fundo_landpage1.png');
 }
 
 .banner.item-2{
-    background-image: url(../../../assets/fundo_landpage3.png);
+    background-image: url('../../../assets/img/fundo_landpage3.png');
 }
 
 // Hero Section

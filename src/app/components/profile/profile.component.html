@@ -1,0 +1,58 @@
+<div class="profile">
+    <!-- Ícone do sino com contador de mensagens -->
+
+    <!--
+        <div class="notification-icon">
+            <i class="fa fa-bell"></i>
+            <span class="badge badge-pill badge-danger">{{ messageCount }}</span>
+        </div>
+        <div class="settings-icon">
+            <i class="fa fa-solid fa-gear"></i>
+        </div>
+    -->
+
+    <!-- Ícone do usuário com a primeira letra -->
+    <div class="user-icon">
+        <a (click)="toggleDropdown()">
+            <div class="initial">{{ getUsuario()?.nome.charAt(0) }}</div>
+        </a>
+        <!-- Menu suspenso -->
+        <ul *ngIf="showDropdown" class="dropdown-menu">
+            <!-- Opções do menu suspenso -->
+            <li>
+                <a href="#" class="dropdown-item">
+                    <div class="avatar">
+                        <div class="avatar-foto">
+                            <img *ngIf="getUsuario()?.foto" [src]="getUsuario()?.foto" alt="">
+                            <div *ngIf="!getUsuario()?.foto" class="avatar-default"></div>
+                        </div>
+                        <label for="file-upload" class="file-upload-label">
+                            <i class="fas fa-camera"></i>
+                            <input id="file-upload" type="file" style="display: none;">
+                        </label>
+                        <div class="avatar-nome">{{getUsuario()?.nome}}</div>
+                    </div>
+                </a>
+            </li>
+            <hr>
+            <li class="menu-item">
+                <a href="#" class="dropdown-item">
+                    <i class="fa-solid fa-user"></i>
+                    Meus dados
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="dropdown-item">
+                    <i class="fa-solid fa-credit-card"></i>
+                    Minha conta
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="dropdown-item" (click)="logout()">
+                    <i class="fa fa-solid fa-right-from-bracket"></i>
+                    Sair
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

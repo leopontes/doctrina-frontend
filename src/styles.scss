@@ -10,6 +10,10 @@
 
 @import 'assets/__variables.scss';
 
+:root{
+  --text-color: #0b2941;
+}
+
 // Base styles
 body {
   font-family: $font-family-base;
@@ -132,3 +136,6 @@ footer {
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
